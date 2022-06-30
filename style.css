@@ -134,17 +134,78 @@ ul li a:hover{
     font-family:'Shadows Into Light', cursive ;
 }
 
-/* auth page styling */
-   .authbod{
-    background: url(ab.png);
+/* contact page styling */
+.contactbod{
+margin: 0;
+padding:0;
+text-align: center;
+background-image: url('contact.png');
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'Poppins', sans-serif;
+;
 
-    min-height: 100%;
-       height: 100vh;
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: cover;
-       
    }
 
+   .contact-title{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: all 4s ease-in-out;
+   }
+   .contact-title h1{
+    font-size: 42px;
+    line-height: 20px;
+    color: #ff7200;
+    font-family:'Shadows Into Light', cursive;
+    text-transform: uppercase;
+}
+   .contact-title h2{
+    margin-top: 20px;
+    font-size: 16px;
+
+   }
+    .contact-form{
+        margin-top: 50px;
+        transition: all 4s ease-in-out;
+        
+        
+    }
+    .form-control{
+        width: 500px;
+        background-color: transparent;
+        position: relative;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        color:#000;
+        font-size: 18px;
+        margin-bottom: 16px;
+        
+    }
+    input{
+      height: 45px; 
+
+    }
+    form .submit{
+        background:#ff7200;
+        border-color: transparent;
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+        height: 50px;
+        margin-top: 20px;
+        color: #000;
+        border-radius: 10px;
+
+    }
+
+   form .submit:hover{
+    background-color: #fff ;
+    cursor: pointer;
+   }
 
 
