@@ -18,6 +18,19 @@ $headers .= "Reply-to: $visitor_email \r\n";
 mail($to, $email_subject,$email_body,$headers);
 header( "location: contact.html");
 
+//database connection
 
-
+$conn = new mysqli('localhost','root','','unibus');
+	if($conn->connect_error){
+		echo "$conn->connect_error";
+		die("Connection Failed : ". $conn->connect_error);
+	} else {
+		$stmt = $conn->prepare("insert into contact(name, Visitor_email, message) values(?, ?, ?)");
+		$stmt->bind_param("sss", $name,  $Visitor_email , $message);
+		$execval = $stmt->execute();
+		echo $execval;
+		echo "Message sent successfully...";
+		$stmt->close();
+		$conn->close();
+	}
 ?>
